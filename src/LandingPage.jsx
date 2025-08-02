@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 function LandingPage() {
   return (
-    <main className="  h-[100vh]">
+    <main className=" h-[100vh]">
       <Hero />
       <Footer />
     </main>
@@ -14,3 +14,6 @@ function LandingPage() {
 export default LandingPage;
 
 //bg-[url(/img/mountains.jpg)
+{
+  /*<Footer /> */
+}

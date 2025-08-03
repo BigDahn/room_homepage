@@ -1,6 +1,8 @@
 import { useWindowSize } from "@react-hook/window-size";
 import React, { useEffect, useState } from "react";
 import Modal from "./Modal";
+import Navlink from "./Navlink";
+import SmallNav from "./SmallNav";
 
 const hero = [
   {
@@ -79,35 +81,21 @@ function Hero() {
       <Modal>
         {" "}
         <div
-          className={`lg:col-span-2  bg-cover bg-top-left lg:bg-center bg-no-repeat ${image} w-[100%] h-[360px] lg:h-full flex`}
+          className={`lg:col-span-2  bg-cover bg-top-left lg:bg-center bg-no-repeat ${image} w-[100%] h-[360px] lg:h-full flex flex-col`}
         >
-          <div className="flex items-start  lg:items-center gap-[7rem]  lg:gap-[4rem] py-[2.4rem] lg:py-[2rem] px-[2rem] lg:px-[4rem] lg:h-[30px] w-full ">
+          <div className="flex items-start   gap-[7rem]  lg:gap-[4rem] py-[2.4rem] lg:py-[2rem] px-[2rem] lg:px-[4rem]   h-[40px] lg:items-center ">
             <Modal.OpenModal opens="modal">
               <button className="flex items-start lg:hidden">
-                <img src="/icon-hamburger.svg" />
+                <img src="/icon-hamburger.svg" className="w-[40px]" />
               </button>
             </Modal.OpenModal>
 
-            <div className="flex   w-full lg:w-fit justify-center lg:justify-start">
+            <div className="flex   w-full lg:w-fit lg:justify-start items-center">
               <img src="/logo.svg" />
             </div>
-            <ul className="text-[16px] font-semibold text-white hidden lg:flex gap-[2rem] items-center  h-[30px]">
-              <li className=" hover:border-b-2  cursor-pointer  h-[27px]">
-                <p> home</p>
-                {/** <div className="border-b-2"></div> */}
-              </li>
-              <li className=" hover:border-b-2  cursor-pointer  h-[27px]">
-                shop
-              </li>
-              <li className=" hover:border-b-2  cursor-pointer  h-[27px]">
-                about
-              </li>
-              <li className=" hover:border-b-2  cursor-pointer  h-[27px]">
-                contact
-              </li>
-            </ul>
+            <Navlink />
           </div>
-          <div className="flex justify-end items-end lg:hidden ">
+          <div className="flex justify-end  h-full  items-end lg:hidden ">
             <button
               className="bg-black w-[56px] h-[56px] flex items-center justify-center cursor-pointer"
               onClick={decreaseIndex}
@@ -155,15 +143,7 @@ function Hero() {
         </div>
         <Modal.Window name="modal">
           <div>
-            <ul className="text-[16px] font-semibold text-black flex gap-4 md:gap-[2rem] items-center  ">
-              <li className=" hover:border-b-2  cursor-pointer  ">
-                <p> home</p>
-                {/** <div className="border-b-2"></div> */}
-              </li>
-              <li className=" hover:border-b-2  cursor-pointer  ">shop</li>
-              <li className=" hover:border-b-2  cursor-pointer  ">about</li>
-              <li className=" hover:border-b-2  cursor-pointer ">contact</li>
-            </ul>
+            <SmallNav />
           </div>
         </Modal.Window>
       </Modal>

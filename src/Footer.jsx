@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <main className="grid lg:grid-cols-4 grid-row-[266px] gap-[3rem] lg:gap-1  lg:h-[20%] font-league-spartan pt-[3rem] lg:pt-0">
+    <main className="grid lg:grid-cols-4 grid-row-[266px] gap-[1rem] md:gap-[3rem] lg:gap-1  lg:h-[20%] font-league-spartan pt-[3rem] lg:pt-0">
       <div className=" bg-[url(/image-about-dark.jpg)] bg-cover bg-no-repeat h-[238px] md:h-[400px] lg:h-full "></div>
       <div className=" lg:col-span-2  px-[2rem] lg:px-[3rem] py-7 flex flex-col gap-3">
         {" "}
